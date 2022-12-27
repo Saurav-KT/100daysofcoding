@@ -1,3 +1,4 @@
+# Problem statement: combine two sorted array
 def merge_two_sorted_array(lst1, lst2):
     count_list1 = len(lst1)
     count_list2 = len(lst2)
@@ -15,6 +16,6 @@ def merge_two_sorted_array(lst1, lst2):
     return arr
 
 
-lst1 = [1, 4, 10, 15]
-lst2 = [1, 3, 5, 40, 50, 60]
+lst1 = [1, 4, 10, 15,18,30,75]
+lst2 = [1, 3, 5, 40, 50,65]
 print(merge_two_sorted_array(lst1, lst2))
