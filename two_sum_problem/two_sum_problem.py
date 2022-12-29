@@ -12,19 +12,17 @@
 # Example 3: Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-def findarrindex(num, target):
+def twoSum(nums: list[int], target: int) -> list[int]:
     result = 0
     return_index = []
-    for element in range(len(num)):
-        for inner_element in range(element + 1, len(num)):
-            result = num[element] + num[inner_element]
+    for element in range(len(nums)):
+        for inner_element in range(element + 1, len(nums)):
+            result = nums[element] + nums[inner_element]
             if result == target:
                 return_index.append([element, inner_element])
-                # return_index = [element, inner_element]
-                # return return_index
     return return_index
 
 
 nums = [3, 2, 4, 1, 5, 3]
 target = 6
-print(findarrindex(nums, target))
+print(twoSum(nums, target))
