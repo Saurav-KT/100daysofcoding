@@ -1,5 +1,4 @@
 # fibonacci series of a given number using recursion
-
 # Approach-1
 # def fibonacci_number(n):
 #     if not isinstance(n, int):

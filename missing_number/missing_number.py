@@ -3,14 +3,34 @@
 # Output: 2
 # Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
 
-def missingNumber(nums: list[int]) -> int:
-    n = len(nums) + 1
-    if 1 <= n <= pow(10, 4):
-        for i in range(n):
-            if i not in nums:
-                return i
-        return 0
+# Approach-1
+# def missingNumber(nums: list[int]) -> int:
+#     for i in range(len(nums) + 1):
+#         if i not in nums:
+#             return i
+#     return 0
 
 
-num = [0, 1]
-print(missingNumber(num))
+# Approach-2
+# def missingNumber(nums: list[int]) -> int:
+#     currentSum = sum(nums)
+#     correctSum = len(nums) * (len(nums) + 1) // 2
+#     return correctSum - currentSum
+#
+#
+# num = [0, 2, 3]
+# print(missingNumber(num))
+
+
+# def creating_gen(index):
+#     months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec']
+#     yield months[index]
+#     yield months[index + 2]
+#
+#
+# next_month = creating_gen(3)
+# print(next(next_month), next(next_month))
+
+
+
+
