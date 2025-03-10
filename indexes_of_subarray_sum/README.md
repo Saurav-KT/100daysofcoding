@@ -86,6 +86,6 @@ Shrink Window:
 
 Remove arr[left] = 1 from the window: current_sum = 10 - 1 = 9.
 
-Move left to 1 (window: [2, 3, 4]).
+Move left to 1 (window: [2, 3, 4])
 
 Now, current_sum == target, so we return the indices [2, 4] (1-based).
