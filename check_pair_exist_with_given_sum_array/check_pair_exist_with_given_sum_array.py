@@ -1,4 +1,5 @@
-# Given an array A[] of n numbers and another number x, the task is to check whether or not there exist two elements in A[] whose sum is exactly x.
+# Given an array A[] of n numbers and another number x,
+# the task is to check whether or not there exist two elements in A[] whose sum is exactly x.
 # Input arr = [0, -1, 2, -3, 1]
 # n=-2
 # output= Yes
