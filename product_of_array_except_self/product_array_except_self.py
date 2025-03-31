@@ -24,19 +24,18 @@
 
 # Approach-2
 
-def productExceptSelf(nums: list[int]) -> list[int]:
+def product_except_self(nums: list[int]) -> list[int]:
     n = len(nums)
     output = [1] * n
-    # print(output)
     for i in range(1, len(output)):
         output[i] = output[i - 1] * nums[i - 1]
-    R = 1
+    r = 1
     for i in range(len(output) - 1, -1, -1):
-        output[i] = output[i] * R
-        R *= nums[i]
+        output[i] = output[i] * r
+        r *= nums[i]
     return output
 
 
 str1 = [2, 5, 9, 7, 13]
 # output = [252, 840, 360, 1260, 420]
-print(productExceptSelf(str1))
+print(product_except_self(str1))
