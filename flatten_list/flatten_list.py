@@ -1,11 +1,13 @@
 # from pandas.core.common import flatten
 
-# Approach-1
+
 lst = [24, 5, 49, 28, [1, 3, 29, [2, 6, 32, 67]]]
 
 
 # new_lst=[]
 # print(list(flatten(lst)))
+
+# Approach-1
 
 # def flatten(test_list):
 #     if isinstance(test_list, list):
@@ -16,6 +18,7 @@ lst = [24, 5, 49, 28, [1, 3, 29, [2, 6, 32, 67]]]
 #     else:
 #         return [test_list]
 
+# Approach-2
 
 def flatten(input_lst,output_lst=[]):
     """ Objective : to flatten nested list
