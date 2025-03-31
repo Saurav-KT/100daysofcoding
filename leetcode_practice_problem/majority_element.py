@@ -13,17 +13,17 @@ Output: 2
 
 """
 
+# Approach-1 Hashmap technique
+# def majority_element(nums: list[int]) -> int:
+#     my_dict = {}
+#     for i in nums:
+#         if i in my_dict:
+#             my_dict[i] += 1
+#         else:
+#             my_dict[i] = 1
+#
+#     keymax = max(zip(my_dict.values(), my_dict.keys()))[1]
+#     return keymax
+#
+# print(majority_element([3,2,3]))
 
-
-def majority_element(nums: list[int]) -> int:
-    my_dict = {}
-    for i in nums:
-        if i in my_dict:
-            my_dict[i] += 1
-        else:
-            my_dict[i] = 1
-
-    keymax = max(zip(my_dict.values(), my_dict.keys()))[1]
-    return keymax
-
-print(majority_element([3,2,3]))

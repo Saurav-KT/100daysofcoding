@@ -8,12 +8,14 @@
 # Method-2
 def reverse_num(number: int) -> int:
     reverse = 0
+    is_negative= number<0
+    number= abs(number)
     while number > 0:
         reminder = number % 10
         reverse = (reverse * 10) + reminder
         number = number // 10
-    return reverse
+    return -reverse if is_negative else reverse
 
 
-num = 28654
+num = 21
 print(reverse_num(num))

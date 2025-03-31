@@ -13,17 +13,33 @@
 # Example 3: Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-def twoSum(nums: list[int], target: int) -> list[int]:
-    result = 0
-    return_index = []
-    for element in range(len(nums)):
-        for inner_element in range(element + 1, len(nums)):
-            result = nums[element] + nums[inner_element]
-            if result == target:
-                return_index.append([element, inner_element])
-    return return_index
+# def two_sum(nums: list[int], target: int) -> list[int]:
+#     result = 0
+#     return_index = []
+#     for element in range(len(nums)):
+#         for inner_element in range(element + 1, len(nums)):
+#             result = nums[element] + nums[inner_element]
+#             if result == target:
+#                 return_index.append([element, inner_element])
+#     return return_index
+
+#
+# nums = [3, 2, 4, 1, 5, 3]
+# target = 6
+# print(two_sum(nums, target))
+
+def two_sum(nums: list[int], target:int)-> list[int]:
+    num_map={} # Create hash map to store number -index pair
+    for i, num in enumerate(nums):
+        complement= target- num
+        if complement in num_map:
+            return [num_map[complement],i]
+        num_map[num]= i
+    return []
 
 
 nums = [3, 2, 4, 1, 5, 3]
 target = 6
-print(twoSum(nums, target))
+print(two_sum(nums, target))
+
+
