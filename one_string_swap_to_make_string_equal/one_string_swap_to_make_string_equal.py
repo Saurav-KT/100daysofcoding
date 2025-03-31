@@ -1,6 +1,6 @@
-# Leetcode problem: Check if One String Swap Can Make Strings Equal
+# Leetcode problem: Check if one string swap can make strings equal
 
-def areAlmostEqual(self, s1: str, s2: str) -> bool:
+def are_almost_equal(self, s1: str, s2: str) -> bool:
     mismatch = []
     for i, j in zip(s1, s2):
         if i != j:
