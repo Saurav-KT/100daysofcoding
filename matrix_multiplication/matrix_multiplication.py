@@ -1,4 +1,5 @@
-# Write a program to get the multiplication of two input matrices and print the result in output.
+# Write a program to get the multiplication of
+# two input matrices and print the result in output.
 
 # Define two matrix A and B in program
 A = [[5, 4, 3],
