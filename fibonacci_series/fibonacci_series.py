@@ -1,10 +1,10 @@
 # fibonacci series of a given number using recursion
 # Approach-1
 def fibonacci_number(n):
-    if not isinstance(n, int):
-        raise TypeError("n vaiables not of type int ")
-    if int(n) <= 1:
-        return n
+    if n ==0:
+        return 0
+    elif n==1 or n==2:
+        return 1
     else:
         return fibonacci_number(n-1)+fibonacci_number(n-2)
 
@@ -23,16 +23,18 @@ print(fibonacci_number(n))
 
 # Approach-3 fibonacci series of a given number without recursion
 # n = int(input("enter positive number "))
-# n1, n2 = 0, 1
-# count = 0
+# prev,next=0,1
+# count=0
 # if n <= 0:
 #     print("enter positive integer")
 # else:
+#     print(prev,next, end=" ")
 #     while count < n:
-#         newval = n1 + n2
-#         n1 = n2
-#         n2 = newval
-#         count += 1
+#             newval= prev+next
+#             prev= next
+#             next= newval
+#             count+=1
+#             print(newval, end=" ")
 
 # T = int(input("Enter the number of test cases"))
 # i = 0
