@@ -1,5 +1,5 @@
 class Solution:
-    def getSecondLargest(self, arr):
+    def find_second_largest(self, arr:list):
         # Code Here
         largest = float('-inf')
         second_largest = float('-inf')
@@ -19,4 +19,4 @@ class Solution:
 
 arr = [12, 35, 1, 10, 34, 1]
 obj= Solution()
-print(obj.getSecondLargest(arr))
+print(obj.find_second_largest(arr))

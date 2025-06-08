@@ -15,10 +15,14 @@ class Solution:
        for right in range(len(arr)):
             current_sum += arr[right]
 
-            while current_sum > target:
-                current_sum -= arr[left]
-                left += 1
-
-            if current_sum == target:
-                 return [left + 1, right + 1]
+            while current_sum >= target:
+                  if current_sum == target:
+                       return [left + 1, right + 1]
+                  current_sum-= arr[left]
+                  left+=1
        return [-1]
+
+lst=[1, 2, 3, 7, 5]
+t=12
+obj= Solution()
+print(obj.subarraySum(lst,t))

@@ -29,16 +29,19 @@
 # print(two_sum(nums, target))
 
 def two_sum(nums: list[int], target:int)-> list[int]:
-    num_map={} # Create hash map to store number -index pair
-    for i, num in enumerate(nums):
-        complement= target- num
-        if complement in num_map:
-            return [num_map[complement],i]
-        num_map[num]= i
+    if not nums or target <=0:
+        raise TypeError('nums or target cannot be empty')
+
+    num_dict = {}
+    for i, val in enumerate(nums):
+        sub_res = target - val
+        if sub_res in num_dict:
+            return [num_dict[sub_res], i]
+        num_dict[val] = i
     return []
 
 
-nums = [3, 2, 4, 1, 5, 3]
+nums = []
 target = 6
 print(two_sum(nums, target))
 
