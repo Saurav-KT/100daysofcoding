@@ -5,9 +5,17 @@ class Solution:
         if n < 0:
             raise ValueError("input value must be greater than equal to zero")
         fact=1
-        for i in range(fact, n+1):
+        for i in range(1,n+1):
             fact= fact* i
         return fact
 
+    def factorial_using_recursion(self, n:int):
+        if n==0 or n==1:
+            return n
+        else:
+            n= n * self.factorial_using_recursion(n-1)
+        return n
+
+
 solution= Solution()
-print(solution.factorial(50))
+print(solution.factorial_using_recursion(6))
