@@ -5,13 +5,12 @@ the Kth largest element in the given array(not the Kth distinct)
 from heapq import heappush, heappop
 
 class LargestElementFinder:
-    def find_kth_largest(self, nums: list[int], k: int) -> int:
+    def find_kth_largest(self, nums: list[str], k: int) -> str:
         heap = []
         for i in range(len(nums)):
             heappush(heap, nums[i])
             if len(heap) > k:
                 heappop(heap)
-        print("heap",heap)
 
         return heap[0]
 
@@ -29,9 +28,9 @@ class LargestElementFinder:
     #     return heap[0]
 
 
-nums=[3,2,2,1,5,6,4]
+nums=["1","2","2"]
 kth=2
 obj=LargestElementFinder()
-print(obj.findKthLargest(nums,kth))
+print(obj.find_kth_largest(nums,kth))
 
 
