@@ -15,7 +15,7 @@ class Solution:
        for right in range(len(arr)):
             current_sum += arr[right]
 
-            while current_sum >= target:
+            while current_sum > target:
                   if current_sum == target:
                        return [left + 1, right + 1]
                   current_sum-= arr[left]

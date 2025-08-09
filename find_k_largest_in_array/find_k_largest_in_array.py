@@ -28,8 +28,8 @@ class LargestElementFinder:
     #     return heap[0]
 
 
-nums=["1","2","2"]
-kth=2
+nums=[3,2,3,1,2,4,4,5,5,6]
+kth=4
 obj=LargestElementFinder()
 print(obj.find_kth_largest(nums,kth))
 
