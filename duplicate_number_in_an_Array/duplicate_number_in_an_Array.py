@@ -42,7 +42,7 @@ def check_duplicate(num: list[int]) -> int:
 # Approach-2
 def check_duplicate(num: list[int]) -> int:
     s = set()
-    for element in nums:
+    for element in num:
         if element in s:
             return element
         s.add(element)

@@ -41,7 +41,7 @@ def two_sum(nums: list[int], target:int)-> list[int]:
     return []
 
 
-nums = []
+nums = [3, 2, 4, 1, 5, 3]
 target = 6
 print(two_sum(nums, target))
 
