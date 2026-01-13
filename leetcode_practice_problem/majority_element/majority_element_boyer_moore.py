@@ -1,19 +1,18 @@
 """Boyer-Moore Majority Voting Algorithm for Searching elements having more
-than K Occurrences"""
-
+than ⌊n / 2⌋ times"""
 
 def majority_element(arr: list)->int:
-    cnt=0
+    count=0
     el=None
     n = len(arr)
     for i in range(n):
-        if cnt ==0:
-            cnt=1
+        if count ==0:
+            count=1
             el=arr[i]
         elif arr[i]==el:
-            cnt+=1
+            count+=1
         else:
-            cnt-=1
+            count-=1
     cnt1=0
     for i in range(n):
         if arr[i]== el:
@@ -22,5 +21,5 @@ def majority_element(arr: list)->int:
         return el
     return -1
 
-lst=[2,2,1,1]
+lst=[1,1, 2, 1, 2,1]
 print(majority_element(lst))
